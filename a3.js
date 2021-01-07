@@ -5,7 +5,8 @@ console.log(container1);
 
 // 2) Select the section with an id of container using querySelector.
 
-
+const container2 = document.querySelector("#container");
+console.log(container2);
 
 // 3) Select all of the list items with a class of "second".
 
