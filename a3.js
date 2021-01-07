@@ -26,11 +26,12 @@ container1.append("Hello!"); //reusing container1 from part 1
 
 const div = document.querySelector(".footer");
 div.classList.add("main");
-console.log(div);
+console.log(div); //testing
 
 // 7) Remove the class main on the div with a class of footer.
 
-
+div.classList.remove("main");
+console.log(div); //testing
 
 // 8) Create a new li element.
 
