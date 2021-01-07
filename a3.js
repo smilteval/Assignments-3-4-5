@@ -35,7 +35,8 @@ console.log(div); //testing
 
 // 8) Create a new li element.
 
-
+const newLiElement = document.createElement("li");
+console.log(newLiElement); //testing
 
 // 9) Give the li the text "four".
 
