@@ -10,12 +10,13 @@ console.log(container2); //testing
 
 // 3) Select all of the list items with a class of "second".
 
-const listItems = document.querySelectorAll("li.second");
-listItems.forEach(listItem => console.log(listItem)); //testing
+const listItemsSecond = document.querySelectorAll("li.second");
+listItemsSecond.forEach(listItem => console.log(listItem)); //testing
 
 // 4) Select a list item with a class of third, but only the list item inside of the ol tag.
 
-
+const listItemThird = document.querySelectorAll("ol li.third");
+listItemThird.forEach(listItem => console.log(listItem));
 
 // 5) Give the section with an id of container the text "Hello!".
 
