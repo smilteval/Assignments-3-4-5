@@ -16,11 +16,11 @@ listItemsSecond.forEach(listItem => console.log(listItem)); //testing
 // 4) Select a list item with a class of third, but only the list item inside of the ol tag.
 
 const listItemThird = document.querySelectorAll("ol li.third");
-listItemThird.forEach(listItem => console.log(listItem));
+listItemThird.forEach(listItem => console.log(listItem)); //testing
 
 // 5) Give the section with an id of container the text "Hello!".
 
-
+container1.append("Hello!"); //reusing container1 from part 1
 
 // 6) Add the class main to the div with a class of footer.
 
