@@ -25,14 +25,14 @@ container1.append("Hello!"); //reusing container1 from part 1
 
 // 6) Add the class main to the div with a class of footer.
 
-const div = document.querySelector(".footer");
-div.classList.add("main");
-console.log(div); //testing
+const divWithFooter = document.querySelector(".footer");
+divWithFooter.classList.add("main");
+console.log(divWithFooter); //testing
 
 // 7) Remove the class main on the div with a class of footer.
 
-div.classList.remove("main");
-console.log(div); //testing
+divWithFooter.classList.remove("main"); //using div from problem 6
+console.log(divWithFooter); //testing
 
 // 8) Create a new li element.
 
@@ -59,3 +59,4 @@ lisInsideOl.forEach(li => {
 
 // 13) Remove the div with a class of footer.
 
+divWithFooter.remove();
