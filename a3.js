@@ -1,6 +1,7 @@
 // 1) Select the section with an id of container without using querySelector.
 
-
+const container1 = document.getElementById("container");
+console.log(container1);
 
 // 2) Select the section with an id of container using querySelector.
 
