@@ -21,6 +21,7 @@ listItemThird.forEach(listItem => console.log(listItem)); //testing
 // 5) Give the section with an id of container the text "Hello!".
 
 container1.append("Hello!"); //reusing container1 from part 1
+//result is visible on the page
 
 // 6) Add the class main to the div with a class of footer.
 
@@ -40,11 +41,13 @@ console.log(newLiElement); //testing
 
 // 9) Give the li the text "four".
 
-
+newLiElement.innerHTML = "four";
 
 // 10) Append the li to the ul element.
 
-
+const ulElement = document.querySelector("ul");
+ulElement.append(newLiElement);
+//result is visible on the page
 
 // 12) Loop over all of the lis inside the ol tag and give them a background color of "green".
 
