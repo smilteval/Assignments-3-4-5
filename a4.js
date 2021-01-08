@@ -7,12 +7,27 @@ function switchText(string){
 //Part 4
 
 function checkPassword(){
-    var password = document.getElementById('password').value;
+    let password = document.getElementById("password").value;
     if(password == "12345678"){
-        document.getElementById("form-title").innerText = "You logged in successfully!";
+        document.getElementById("form-title").innerHTML = "You logged in successfully!";
     }
     else{
         alert("Your password is incorrect");
     }
     return false; //needed to stop the submission from reloading the page
+}
+
+//BONUS
+
+function calculateVolume(){
+    let radius = document.getElementById("radius").value;
+    if(radius >= 0){
+        let volume = (4*Math.PI*radius*radius*radius)/3;
+        volume = volume.toFixed(2);
+        document.getElementById("answer").innerHTML = volume;
+    }
+    else{
+        alert("Radius cannot be negative!");
+    }
+    return false;
 }
