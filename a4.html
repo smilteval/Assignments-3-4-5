@@ -23,20 +23,24 @@
 
     <hr>
 
-    <!--Part 3-->
-    <section class="form">
-        <h1>Log In</h1>
-        <form id="user-info" action="">
+    <!--Parts 3 & 4-->
+    <section class="user-form">
+        <h1 id="form-title">Enter your information</h1>
+        <form id="user-info" onsubmit="return checkPassword()">
+
             <label for="username">Username</label>
-            <input type="text" id=username name=username>
+            <input type="text" id="username" name="username">
+
             <label for="email">Email</label>
-            <input type="email" id=email name=email>
+            <input type="email" id="email" name="email">
+
             <label for="password">Password</label>
-            <input type="password" id=password name=password>
+            <input type="password" id="password" name="password">
+
             <input type="submit" value="submit">
         </form>
     </section>
-    <!--Part 3-->
+    <!--Parts 3 & 4-->
 
     <hr>
 
