@@ -43,7 +43,7 @@ label{
     width: 50%;
     background-color: lightgray;
     border: 2px solid gray;
-    margin :auto;
+    margin: auto;
 }
 
 #user-info{
@@ -53,3 +53,38 @@ label{
     padding-bottom: 15px;
 }
 
+.volume-calculator{
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.volume-calculator h1{
+    background-color: #c4c4fb;
+    color: #2424fb;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 50%;
+}
+
+#sphere-volume-form{
+    margin: 20px 0 20px 0;
+}
+
+#calculateBtn{
+    background-color: #c4c4fb;
+    color: #2424fb;
+}
+
+#answer{
+    display: flex;
+    background-color: #c4c4fb;
+}
+
+#answer h4{
+    color:blue ;
+    padding-left: 2em;
+}
