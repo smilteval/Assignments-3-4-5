@@ -3,19 +3,14 @@ body{
 }
 
 table{
-    background-color: lightsalmon;
-    padding: 2em;
+    border-collapse: collapse;
     table-layout: auto;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 td{
+    border: 4px solid lightsalmon;
     background-color: rgb(255, 255, 255);
     height: 10em;
-}
-
-button{
-    margin: 20px;
-    padding: 10px;
-    font-size: 14px;
 }
