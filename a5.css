@@ -1,0 +1,15 @@
+body{
+    margin: 50px;
+}
+
+table{
+    background-color: lightsalmon;
+    padding: 2em;
+    table-layout: auto;
+    width: 100%;
+}
+
+td{
+    background-color: rgb(255, 255, 255);
+    height: 10em;
+}
