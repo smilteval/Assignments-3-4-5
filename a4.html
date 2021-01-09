@@ -8,9 +8,9 @@
 <body>
     <!--Part 1-->
     <section class="button-fight">
-        <button id="btnRight1" onclick="switchText('I’m Right')">I'm Right</button>
+        <button class ="rightBtn" id="btn1" onclick="switchText('I’m Right')">I'm Right</button>
         <h1>Click to start arguing</h1>
-        <button id="btnRight2" onclick="switchText('No, I’m Right!')">I'm Right</button>
+        <button class ="rightBtn" id="btn2" onclick="switchText('No, I’m Right!')">I'm Right</button>
     </section>    
     <!--Part 1-->
     
@@ -30,14 +30,15 @@
         <form id="user-info" onsubmit="return checkPassword()">
 
             <label for="username">Username</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" required>
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
 
             <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" required>
 
+            <br>
             <input type="submit" value="submit">
         </form>
     </section>
@@ -48,17 +49,20 @@
     <!--BONUS-->
     <section class="volume-calculator">
         <h1>Volume of a Sphere Calculator</h1>
-        <img src ="https://www.onlinemathlearning.com/image-files/volume-sphere.png">
+        <img src ="https://www.onlinemathlearning.com/image-files/volume-sphere.png" alt ="volume of sphere diagram and formula">
 
-        <form id="sphere-volume" onsubmit="return calculateVolume()">
+        <form id="sphere-volume-form" onsubmit="return calculateVolume()">
             <label for="radius">Enter radius: </label>
             <input type="number" id="radius" name="radius">
 
-            <input type="submit" value="Calculate">
-
-            <h4>The volume of the sphere is: </h4>
-            <h4 id ="answer" >
+            <input id="calculateBtn" type="submit" value="Calculate">
         </form>
+
+        <div id="answer">
+            <h4>The volume is: </h4>
+            <h4 id="volume-answer"></h4>
+        </div>
+
     </section>
 
     <!--BONUS-->
