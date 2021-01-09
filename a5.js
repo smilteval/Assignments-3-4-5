@@ -36,3 +36,13 @@ function addColumn(){
         row.insertCell();
     })
 }
+
+//user story 3
+function removeRow(){
+    
+    //get the last row
+    let lastRow = grid.lastElementChild;
+    
+    //remove it
+    lastRow.remove();
+}
