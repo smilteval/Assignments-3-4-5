@@ -1,6 +1,7 @@
+let grid = document.querySelector("tbody");
+
 //user story 1 
 function addRow(){
-    let grid = document.querySelector("tbody");
 
     //add a row to the end of the grid
     let newRow = grid.insertRow();
@@ -20,4 +21,18 @@ function addRow(){
     for(let i = 0; i < colNum; i++){
         newRow.insertCell();
     }
+}
+
+//user story 2
+function addColumn(){
+
+    //get a list of rows
+    let rowList = grid.querySelectorAll("tr");
+    //turn it into an array
+    let rowArray = Array.from(rowList);
+    
+    //for every row add a cell at the end of it
+    rowArray.forEach(row=>{
+        row.insertCell();
+    })
 }
