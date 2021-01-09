@@ -33,3 +33,23 @@ hr{
     color: white;
     box-shadow: 3px 3px 10px darkred;
 }
+
+label{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.user-form{
+    width: 50%;
+    background-color: lightgray;
+    border: 2px solid gray;
+    margin :auto;
+}
+
+#user-info{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
