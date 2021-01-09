@@ -1,0 +1,27 @@
+body{
+    font-family:cursive;
+    margin: 10%;
+    text-align: center;
+}
+
+hr{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.rightBtn{
+    padding: 15px 40px 15px 40px;
+    font-size: 16px;
+    border-radius: 25px;
+    color: white;
+}
+
+#btn1{
+    background-color: darkcyan;
+    border: 3px solid cyan;
+}
+
+#btn2{
+    background-color: darkmagenta ;
+    border: 3px solid magenta;
+}
