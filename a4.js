@@ -10,6 +10,7 @@ function checkPassword(){
     let password = document.getElementById("password").value;
     if(password == "12345678"){
         document.getElementById("form-title").innerHTML = "You logged in successfully!";
+        document.getElementById("form-title").style.color = "green";
     }
     else{
         alert("Your password is incorrect");
