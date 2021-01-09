@@ -13,3 +13,9 @@ td{
     background-color: rgb(255, 255, 255);
     height: 10em;
 }
+
+button{
+    margin: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
