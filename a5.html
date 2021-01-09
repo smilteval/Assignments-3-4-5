@@ -37,7 +37,7 @@
     <button id="remove-column" onClick="removeColumn()">Remove column</button>
     
     <p>Select a color: </p>
-    <select name="colors" id="colors">
+    <select name="colors" id="colors" onChange="selectColor(this.value)">
       <option value="" selected disabled hidden> Colors </option>
       <option class="red" value="red">red</option>
       <option class="blue" value="blue">blue</option>
