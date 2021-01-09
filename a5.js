@@ -46,3 +46,17 @@ function removeRow(){
     //remove it
     lastRow.remove();
 }
+
+//user story 4
+function removeColumn(){
+
+    //get a list of rows
+    let rowList = grid.querySelectorAll("tr");
+    //turn it into an array
+    let rowArray = Array.from(rowList);
+    
+    //for every row, remove the last cell
+    rowArray.forEach(row=>{
+        row.lastElementChild.remove();
+    })
+}
