@@ -11,6 +11,21 @@ function initCells(cell){
     
     //user story 6
     cell.addEventListener("click", changeColor);
+    
+    //user story 10
+    cell.addEventListener("mousedown", e =>{
+        canApplyColor = true;
+    })
+    cell.addEventListener("mousemove", e=>{
+        //color while the mouse is clicked and moving
+        if(canApplyColor){
+            cell.style.backgroundColor = selectedColor;
+            cell.classList.remove("uncolored");
+        }
+    })
+    cell.addEventListener("mouseup", e=>{
+        canApplyColor = false;
+    })
 }
 
 //user story 1 
