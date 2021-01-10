@@ -87,6 +87,9 @@ function changeColor(){
         this.style.backgroundColor = selectedColor;
         this.classList.remove("uncolored");
     }
+    else{
+        alert("please select a color");
+    }
 }
 
 //user story 7
@@ -97,6 +100,9 @@ function fillAllUncolored(){
     let uncoloredCells = document.getElementsByClassName("uncolored");
     uncoloredCells = Array.from(uncoloredCells);
     
-    console.log(uncoloredCells);
-    
+    //change every uncolored cell's color to the selected one
+    uncoloredCells.forEach(cell=>{
+        cell.style.backgroundColor = selectedColor;
+        cell.classList.remove("uncolored");
+    })
 }
