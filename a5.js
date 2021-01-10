@@ -1,7 +1,10 @@
 let grid = document.querySelector("tbody");
 let selectedColor = " ";
+//gets a list of all the cells and turns it into an aray
+let allCells = Array.from(document.querySelectorAll("td"));
 
 //user story 1 
+
 function addRow(){
 
     //add a row to the end of the grid
@@ -112,11 +115,6 @@ function fillAllUncolored(){
 
 function fillAll(){
 
-    //get a list of uncolored cells
-    let allCells = document.querySelectorAll("td");
-    //turn it into array
-    allCells = Array.from(allCells);
-    
     //change every uncolored cell's color to the selected one
     allCells.forEach(cell=>{
         cell.style.backgroundColor = selectedColor;
@@ -124,3 +122,13 @@ function fillAll(){
     })
 }
 
+//user story 9
+
+function clearAll(){
+    
+    //change every uncolored cell's color to the selected one
+    allCells.forEach(cell=>{
+        cell.style.backgroundColor = selectedColor;
+        cell.classList.remove("uncolored");
+    })
+}
