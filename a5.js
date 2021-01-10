@@ -98,6 +98,7 @@ function fillAllUncolored(){
 
     //get a list of uncolored cells
     let uncoloredCells = document.getElementsByClassName("uncolored");
+    //turn it into array
     uncoloredCells = Array.from(uncoloredCells);
     
     //change every uncolored cell's color to the selected one
@@ -106,3 +107,20 @@ function fillAllUncolored(){
         cell.classList.remove("uncolored");
     })
 }
+
+//user story 8
+
+function fillAll(){
+
+    //get a list of uncolored cells
+    let allCells = document.querySelectorAll("td");
+    //turn it into array
+    allCells = Array.from(allCells);
+    
+    //change every uncolored cell's color to the selected one
+    allCells.forEach(cell=>{
+        cell.style.backgroundColor = selectedColor;
+        cell.classList.remove("uncolored");
+    })
+}
+
