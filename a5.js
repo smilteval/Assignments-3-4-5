@@ -1,4 +1,5 @@
 let grid = document.querySelector("tbody");
+let selectedColor;
 
 //user story 1 
 function addRow(){
@@ -21,8 +22,11 @@ function addRow(){
     for(let i = 0; i < colNum; i++){
         let newCell = newRow.insertCell();
 
-        //user story 6 adding a class of uncolored to every new cell
+        //user story 6 
+        //adding a class of uncolored to every new cell
         newCell.classList.add("uncolored");
+        //adding an event listener to every cell
+        newCell.addEventListener("click", changeColor);
     }
 }
 
@@ -36,7 +40,11 @@ function addColumn(){
     
     //for every row add a cell at the end of it
     rowArray.forEach(row=>{
-        row.insertCell();
+        let newCell2 = row.insertCell();
+
+        //user story 6
+        //adding an event listener to every cell
+        newCell2.addEventListener("click", changeColor);
     })
 }
 
@@ -62,4 +70,17 @@ function removeColumn(){
     rowArray.forEach(row=>{
         row.lastElementChild.remove();
     })
+}
+
+//user story 6 
+
+//saving the selected color from the dropdown menu
+function selectColor(color){
+    selectedColor = color;
+}
+
+//changing cell's color to the selected one
+function changeColor(){
+    this.style.backgroundColor = selectedColor;
+    this.classList.remove("uncolored");
 }
