@@ -1,5 +1,5 @@
 let grid = document.querySelector("tbody");
-let selectedColor;
+let selectedColor = " ";
 
 //user story 1 
 function addRow(){
@@ -43,6 +43,8 @@ function addColumn(){
         let newCell2 = row.insertCell();
 
         //user story 6
+        //adding a class of uncolored to every new cell
+        newCell2.classList.add("uncolored");
         //adding an event listener to every cell
         newCell2.addEventListener("click", changeColor);
     })
@@ -81,6 +83,26 @@ function selectColor(color){
 
 //changing cell's color to the selected one
 function changeColor(){
-    this.style.backgroundColor = selectedColor;
-    this.classList.remove("uncolored");
+    if(selectedColor !== " "){
+        this.style.backgroundColor = selectedColor;
+        this.classList.remove("uncolored");
+    }
+    else{
+        alert("please select a color");
+    }
+}
+
+//user story 7
+
+function fillAllUncolored(){
+
+    //get a list of uncolored cells
+    let uncoloredCells = document.getElementsByClassName("uncolored");
+    uncoloredCells = Array.from(uncoloredCells);
+    
+    //change every uncolored cell's color to the selected one
+    uncoloredCells.forEach(cell=>{
+        cell.style.backgroundColor = selectedColor;
+        cell.classList.remove("uncolored");
+    })
 }

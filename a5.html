@@ -26,7 +26,7 @@
     
     <p>Select a color: </p>
     <select name="colors" id="colors" onChange="selectColor(this.value)">
-      <option value="" selected disabled hidden> Colors </option>
+      <option value=" " selected disabled hidden> Colors </option>
       <option class="red" value="red">red</option>
       <option class="blue" value="blue">blue</option>
       <option class="green" value="green">green</option>
@@ -39,8 +39,11 @@
     </select>
 
     <ul>
-      <li>To color one cell select a color and click on that cell.</li>
+      <li>To color one cell, select a color and click on that cell.</li>
+      <li>To color all the uncolored cells, click the "fill all" button.</li>
     </ul>
+
+    <button id="fill-all" onClick="fillAllUncolored()">Fill all</button>
     <script src="a5.js"></script>
 </body>
 </html>
