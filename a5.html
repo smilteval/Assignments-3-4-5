@@ -10,7 +10,8 @@
 <body>
 
   <h1>To create a grid click add row and add column.</h1>
-  <h5>*For it to be visible, you need at least 1 row and 1 column.</h5>
+  <h3>*For it to be visible, you need at least 1 row and 1 column.</h3>
+
     <div id="grid-container">
         <table id="grid">
           <tbody>
@@ -24,33 +25,39 @@
     <button id="remove-row" onClick="removeRow()">Remove row</button>
     <button id="remove-column" onClick="removeColumn()">Remove column</button>
     
-    <p>Select a color: </p>
-    <select name="colors" id="colors" onChange="selectColor(this.value)">
-      <option value=" " selected disabled hidden> Colors </option>
-      <option class="red" value="red">red</option>
-      <option class="blue" value="blue">blue</option>
-      <option class="green" value="green">green</option>
-      <option class="yellow" value="yellow">yellow</option>
-      <option class="orange" value="orange">orange</option>
-      <option class="purple" value="purple">purple</option>
-      <option class="pink" value="pink">pink</option>
-      <option class="brown" value="brown">brown</option>
-      <option class="black" value="black">black</option>
-    </select>
+    <hr>
+
+    <div id = "color-selection-panel">
+      <h3>Select a color: </h3>
+      <select name="colors" id="color-dropdown" onChange="selectColor(this.value)">
+        <option value=" " selected disabled hidden> Colors </option>
+        <option class="red" value="red">red</option>
+        <option class="blue" value="blue">blue</option>
+        <option class="green" value="green">green</option>
+        <option class="yellow" value="yellow">yellow</option>
+        <option class="orange" value="orange">orange</option>
+        <option class="purple" value="purple">purple</option>
+        <option class="pink" value="pink">pink</option>
+        <option class="brown" value="brown">brown</option>
+      </select>  
+    </div>
 
     <ul>
       <li>To color one cell, select a color and click on that cell.</li>
-      <li>To color all the uncolored cells, select a color and click the "fill all" button.</li>
-      <li>To fill all cells, select a color and click the "fill all" button.</li>
-      <li>To clear all cells, click the "clear all" button.</li>
       <li>To color multiple cells, click and hold from a single cell to a different cell.</li>
+      <li>
+        To color all the uncolored cells, select a color and click 
+        <button id="fill-all-uncolored" onClick="fillAllUncolored()">Fill all uncolored</button>
+      </li>
+      <li>
+        To fill all cells, select a color and click 
+        <button id="fill-all" onClick="fillAll()">Fill all</button>
+      </li>
+      <li>
+        To clear all cells, click 
+        <button id="clear-all" onClick="clearAll()">Clear all</button>
+      </li>
     </ul>
-
-    <button id="fill-all-uncolored" onClick="fillAllUncolored()">Fill all uncolored</button>
-
-    <button id="fill-all" onClick="fillAll()">Fill all</button>
-
-    <button id="clear-all" onClick="clearAll()">Clear all</button>
 
     <script src="a5.js"></script>
 </body>
