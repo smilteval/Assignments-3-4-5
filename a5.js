@@ -1,5 +1,5 @@
 let grid = document.querySelector("tbody");
-let selectedColor;
+let selectedColor = " ";
 
 //user story 1 
 function addRow(){
@@ -83,8 +83,10 @@ function selectColor(color){
 
 //changing cell's color to the selected one
 function changeColor(){
-    this.style.backgroundColor = selectedColor;
-    this.classList.remove("uncolored");
+    if(selectedColor !== " "){
+        this.style.backgroundColor = selectedColor;
+        this.classList.remove("uncolored");
+    }
 }
 
 //user story 7
@@ -93,6 +95,8 @@ function fillAllUncolored(){
 
     //get a list of uncolored cells
     let uncoloredCells = document.getElementsByClassName("uncolored");
+    uncoloredCells = Array.from(uncoloredCells);
+    
     console.log(uncoloredCells);
     
 }
