@@ -1,7 +1,5 @@
 let grid = document.querySelector("tbody");
 let selectedColor = " ";
-//gets a list of all the cells and turns it into an aray
-let allCells = Array.from(document.querySelectorAll("td"));
 
 //user story 1 
 
@@ -99,36 +97,54 @@ function changeColor(){
 
 function fillAllUncolored(){
 
-    //get a list of uncolored cells
-    let uncoloredCells = document.getElementsByClassName("uncolored");
-    //turn it into array
-    uncoloredCells = Array.from(uncoloredCells);
-    
-    //change every uncolored cell's color to the selected one
-    uncoloredCells.forEach(cell=>{
-        cell.style.backgroundColor = selectedColor;
-        cell.classList.remove("uncolored");
-    })
+    if(selectedColor !== " "){
+        //get a list of uncolored cells
+        let uncoloredCells = document.getElementsByClassName("uncolored");
+        //turn it into array
+        uncoloredCells = Array.from(uncoloredCells);
+        
+        //change every uncolored cell's color to the selected one
+        uncoloredCells.forEach(cell=>{
+            cell.style.backgroundColor = selectedColor;
+            cell.classList.remove("uncolored");
+        })
+    }
+    else{
+        alert("please select a color");
+    }
 }
 
 //user story 8
 
 function fillAll(){
 
-    //change every uncolored cell's color to the selected one
-    allCells.forEach(cell=>{
-        cell.style.backgroundColor = selectedColor;
-        cell.classList.remove("uncolored");
-    })
+    if(selectedColor !== " "){
+        //get a list of all cells
+        let allCells = document.getElementsByTagName("td");
+        //turn it into array
+        allCells = Array.from(allCells);
+
+        allCells.forEach(cell=>{
+            cell.style.backgroundColor = selectedColor;
+            cell.classList.remove("uncolored");
+        })
+    }
+    else{
+        alert("please select a color");
+    }
 }
 
 //user story 9
 
 function clearAll(){
     
-    //change every uncolored cell's color to the selected one
+    //get a list of all cells
+    let allCells = document.getElementsByTagName("td");
+    //turn it into array
+    allCells = Array.from(allCells);
+
     allCells.forEach(cell=>{
-        cell.style.backgroundColor = selectedColor;
-        cell.classList.remove("uncolored");
+        cell.style.backgroundColor = null;
+        cell.classList.add("uncolored");
     })
 }
