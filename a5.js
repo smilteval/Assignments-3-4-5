@@ -19,7 +19,10 @@ function addRow(){
 
     //filling the row with cells
     for(let i = 0; i < colNum; i++){
-        newRow.insertCell();
+        let newCell = newRow.insertCell();
+
+        //user story 6 adding a class of uncolored to every new cell
+        newCell.classList.add("uncolored");
     }
 }
 
