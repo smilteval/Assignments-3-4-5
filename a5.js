@@ -43,6 +43,8 @@ function addColumn(){
         let newCell2 = row.insertCell();
 
         //user story 6
+        //adding a class of uncolored to every new cell
+        newCell2.classList.add("uncolored");
         //adding an event listener to every cell
         newCell2.addEventListener("click", changeColor);
     })
@@ -83,4 +85,14 @@ function selectColor(color){
 function changeColor(){
     this.style.backgroundColor = selectedColor;
     this.classList.remove("uncolored");
+}
+
+//user story 7
+
+function fillAllUncolored(){
+
+    //get a list of uncolored cells
+    let uncoloredCells = document.getElementsByClassName("uncolored");
+    console.log(uncoloredCells);
+    
 }
