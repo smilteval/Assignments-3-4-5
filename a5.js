@@ -1,5 +1,17 @@
 let grid = document.querySelector("tbody");
 let selectedColor = " ";
+let canApplyColor = false;
+
+function initCells(cell){
+    
+    //adding a class of uncolored to every new cell
+    cell.classList.add("uncolored");
+    
+    //adding an event listener to every cell
+    
+    //user story 6
+    cell.addEventListener("click", changeColor);
+}
 
 //user story 1 
 
@@ -24,10 +36,7 @@ function addRow(){
         let newCell = newRow.insertCell();
 
         //user story 6 
-        //adding a class of uncolored to every new cell
-        newCell.classList.add("uncolored");
-        //adding an event listener to every cell
-        newCell.addEventListener("click", changeColor);
+        initCells(newCell); //helper function
     }
 }
 
@@ -44,10 +53,7 @@ function addColumn(){
         let newCell2 = row.insertCell();
 
         //user story 6
-        //adding a class of uncolored to every new cell
-        newCell2.classList.add("uncolored");
-        //adding an event listener to every cell
-        newCell2.addEventListener("click", changeColor);
+        initCells(newCell2);
     })
 }
 
